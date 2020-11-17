@@ -1,8 +1,23 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
-
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="vbox">
+    <stylesheets>
+        <URL value="@/css/style.css"/>
+    </stylesheets>
+    <VBox fx:id="textContainer" prefWidth="-Infinity" alignment="BOTTOM_RIGHT">
+        <TextArea fx:id="textResult" prefWidth="-Infinity" prefHeight="-Infinity" editable="false" />
+        <HBox>
+            <Button fx:id="clearLast" onAction="#resetCalc" text="C"/>
+            <Button fx:id="resetCalc" onAction="#clearLast" text="⌫"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vboxx">
+    </VBox>
+</VBox>
